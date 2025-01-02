@@ -1,0 +1,21 @@
+local _0=game:GetService("StarterGui")
+_0:SetCore("SendNotification",{Title="no collide script",Text=string.char(108,107,114),Icon="rbxassetid://97193004022751",Duration=2})
+
+local _1=game:GetService("Players")
+
+local _2=function()
+    for _,_3 in ipairs(_1:GetPlayers()) do
+        if _3.Character then
+            for _,_4 in ipairs(_3.Character:GetDescendants()) do
+                if _4:IsA("BasePart") then
+                    _4.CanCollide=false
+                end
+            end
+        end
+    end
+end
+
+while true do
+    _2()
+    task.wait(0)
+end
