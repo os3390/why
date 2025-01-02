@@ -65,6 +65,13 @@ local Button = Tab:CreateButton({
    end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "Anitfling",
+   Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/os3390/why/refs/heads/main/Anitfling'))()
+   end,
+})
+
 local Tab = Window:CreateTab("moveset", nil) -- Title, Image
 local MainSection = Tab:CreateSection("Section Example")
 
